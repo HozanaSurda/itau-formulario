@@ -9,7 +9,120 @@
 </head>
 
 <body>
-    <h1> EM DESENVOLVIMENTO ... </h1>
+    <header>
+        <h1> Cadastro Pessoal </h1>
+    </header>
+    <section id="corpo-full">
+        <article id="Noticia principal">
+            <header>
+                <div>
+                    formulario de contato
+                </div>
+                <hgroup>
+                    <h3> Fale conosco</h3>
+                    <h1>Formulario de Contatos </h1>
+                    <h2> Por Hozana Surda</h2>
+                    <h4 class="direita"> Atualizacao 15 de Maio de 2021</h4>
+                </hgroup>
+            </header>
+
+            <form method="post" id="fcontato" action="megsorvino@hotmail.com">
+                <fieldset>
+                    <legend id="usuario">Identificacao do Usuário</legend>
+                    <p> <label for="cnome"> Nome:</label> <input type="text" name="tnome" id="cnome" size="20"
+                            maxlength="30" placeholder="Nome Completo" /> </p>
+                    <p>Senha: <input type="password" name="tsenha" id="csenha" size="20" maxlength="8"
+                            placeholder="8 dígito" /> </p>
+                    <p>E-mail: <input type="email" name="temail" id="cemail" size="20" maxlength="30"
+                            placeholder="E-mail" /> </p>
+
+                    <fieldset id="sexo">
+                        <legend>sexo</legend>
+                        <input type="radio" name="tsexo" id="cmasc" /> <label for="cmasc"> Masculino </label> <br />
+                        <input type="radio" name="tsexo" id="cfem" /> <label for="cfem"> Feminino </label>
+                    </fieldset>
+                    <p>Data de Nascimento <input type="date" name="tnasc" id="cnasc"> </p>
+                </fieldset>
+
+                <fieldset id="identificacao">
+                    <legend>Dados Pessoais </legend>
+                    <p> CPF: <input type="number" name="tcpf" id="ccpf" /> </p>
+                    <p> RG: <input type="number" name="trg" id="crg" /> </p>
+                    <p> Telefone Celular: <input type="number" name="ttel" id="ctel" /> </p>
+                    <p>Telefone Fixo: <input type="number" name="tfixo" id="cfixo" /></p>
+                </fieldset>
+
+                <fieldset id="endereco">
+                    <legend>Endereco do Usuário</legend>
+                    <p> Endereço: <input type="text" name="trua" id="crua" size="17" maxlength="80"
+                            placeholder="Rua, Av,..."> </p>
+                    <p> Numero: <input type="number" name="tnum" id="cnum" min="0" max="99999" /> </p>
+                    <p> <label for="cest"> Estado:</label>
+                        <select name="test" id="cest">
+                            <optgroup label="Regiao Norte">
+                                <option value="AC">Acre</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="PA">Pará</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="TO">Tocantins</option>
+                            </optgroup>
+
+                            <optgroup label="Regiao Nordeste">
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="SE">Sergipe</option>
+                            </optgroup>
+
+                            <optgroup label="Regiao Centro-Oeste">
+                                <option value="DF">Distrito Federal</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                            </optgroup>
+
+                            <optgroup label="Regiao Sudeste">
+                                <option value="ES">Espírito Santo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="SP">São Paulo</option>
+                            </optgroup>
+
+                            <optgroup label="Regiao Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p> <label for="ccid"> Cidade: </label> <input type="text" name="tcid" id="ccid" size="20"
+                            maxlength="40" placeholder="sua cidade" /> </p>
+
+                    <p> <label for="ccep">Cep</label> <input type="number" name="tcep" id="ccep" size="15"
+                            placeholder="seu cep" /> </p>
+                </fieldset>
+
+                <fieldset id="botao">
+
+                    {Botao enviar}
+                </fieldset>
+            </form>
+
+            <div>
+                Deus é Fiel!
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; HozanaSurda</p>
+    </footer>
 </body>
 
 </html>
