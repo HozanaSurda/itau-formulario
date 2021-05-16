@@ -27,37 +27,66 @@
             </header>
 
             <form method="post" id="fcontato" action="megsorvino@hotmail.com">
-                <fieldset>
-                    <legend id="usuario">Identificacao do Usuário</legend>
-                    <p> <label for="cnome"> Nome:</label> <input type="text" name="tnome" id="cnome" size="20"
-                            maxlength="30" placeholder="Nome Completo" /> </p>
-                    <p>Senha: <input type="password" name="tsenha" id="csenha" size="20" maxlength="8"
-                            placeholder="8 dígito" /> </p>
-                    <p>E-mail: <input type="email" name="temail" id="cemail" size="20" maxlength="30"
-                            placeholder="E-mail" /> </p>
+                <fieldset id="dados">
+                    <legend>Dados Pessoais </legend>
+
+                    <p> <label for="cnome"> Nome:</label> </p>
+                    <p>
+                        <input type="text" name="tnome" id="cnome" maxlength="250" placeholder="Nome Completo" />
+                    </p>
 
                     <fieldset id="sexo">
                         <legend>sexo</legend>
-                        <input type="radio" name="tsexo" id="cmasc" /> <label for="cmasc"> Masculino </label> <br />
-                        <input type="radio" name="tsexo" id="cfem" /> <label for="cfem"> Feminino </label>
+
+                        <input type="radio" name="tsexo" id="cmasc" />
+                        <label for="cmasc"> Masculino </label> <br />
+
+                        <input type="radio" name="tsexo" id="cfem" />
+                        <label for="cfem"> Feminino </label>
                     </fieldset>
-                    <p>Data de Nascimento <input type="date" name="tnasc" id="cnasc"> </p>
+
+                    <p> <label for="cnasc"> Data de Nascimento: </label> </p>
+                    <p>
+                        <input type="date" name="tnasc" id="cnasc">
+                    </p>
+
+                    <p> <label for="ccpf"> CPF:</label> </p>
+                    <p>
+                        <input type="text" name="tcpf" id="ccpf" maxlength="14"
+                            onkeyup="javascript: maskManager( this, maskCPF );" />
+                    </p>
+
+                    <p> <label for="crg"> RG: </label> </p>
+                    <p>
+                        <input type="text" name="trg" id="crg" maxlength="7" />
+                    </p>
+
+                    <p> <label for="ctel"> Telefone Celular: </label> </p>
+                    <p> <input type="text" name="ttel" id="ctel" maxlength="14"
+                            onkeyup="javascript: maskManager( this, maskTelefoneCelular );" />
+                    </p>
+
+                    <p> <label for="cfixo"> Telefone Fixo: </label> </p>
+                    <p>
+                        <input type="text" name="tfixo" id="cfixo"
+                            onkeyup="javascript: maskManager( this, maskTelefoneFixo );" />
+                    </p>
                 </fieldset>
 
-                <fieldset id="identificacao">
-                    <legend>Dados Pessoais </legend>
-                    <p> CPF: <input type="number" name="tcpf" id="ccpf" /> </p>
-                    <p> RG: <input type="number" name="trg" id="crg" /> </p>
-                    <p> Telefone Celular: <input type="number" name="ttel" id="ctel" /> </p>
-                    <p>Telefone Fixo: <input type="number" name="tfixo" id="cfixo" /></p>
-                </fieldset>
-
-                <fieldset id="endereco">
+                <fieldset id=" endereco">
                     <legend>Endereco do Usuário</legend>
-                    <p> Endereço: <input type="text" name="trua" id="crua" size="17" maxlength="80"
-                            placeholder="Rua, Av,..."> </p>
-                    <p> Numero: <input type="number" name="tnum" id="cnum" min="0" max="99999" /> </p>
-                    <p> <label for="cest"> Estado:</label>
+                    <p> <label for="crua"> Endereço: </label> </p>
+                    <p>
+                        <input type="text" name="trua" id="crua" maxlength="80" placeholder="Rua, Av,...">
+                    </p>
+
+                    <p> <label for="cnum"> Numero: </label></p>
+                    <p>
+                        <input type="text" name="tnum" id="cnum" maxlength="10" />
+                    </p>
+
+                    <p> <label for="cest"> Estado:</label></p>
+                    <p>
                         <select name="test" id="cest">
                             <optgroup label="Regiao Norte">
                                 <option value="AC">Acre</option>
@@ -102,27 +131,31 @@
                             </optgroup>
                         </select>
                     </p>
-                    <p> <label for="ccid"> Cidade: </label> <input type="text" name="tcid" id="ccid" size="20"
-                            maxlength="40" placeholder="sua cidade" /> </p>
 
-                    <p> <label for="ccep">Cep</label> <input type="number" name="tcep" id="ccep" size="15"
-                            placeholder="seu cep" /> </p>
+                    <p> <label for="ccid"> Cidade: </label> </p>
+                    <p>
+                        <input type="text" name="tcid" id="ccid" size="20" maxlength="40" placeholder="sua cidade" />
+                    </p>
+
+                    <p> <label for="ccep">CEP:</label> </p>
+                    <p>
+                        <input type="text" name="tcep" id="ccep" size="10" placeholder="seu cep"
+                            onkeyup="javascript: maskManager( this, maskCEP );" />
+                    </p>
                 </fieldset>
 
                 <fieldset id="botao">
-
                     {Botao enviar}
                 </fieldset>
             </form>
 
-            <div>
-                Deus é Fiel!
-            </div>
         </article>
     </section>
     <footer>
-        <p>&copy; HozanaSurda</p>
+        <p>&copy; HozanaSurda - Deus é Fiel!</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
