@@ -1,5 +1,16 @@
+:root {
+	--corPrimaria: rgb(0, 160, 160);
+	--corSecundaria: white;
+	--corCampos: #ecf0f1;
+}
+
 body {
-	background-color: rgb(0, 160, 160);
+	background-color: var(--corPrimaria);
+}
+
+h1 {
+	font-size: xx-large;
+	color: var(--corSecundaria);
 }
 
 section {
@@ -11,7 +22,7 @@ section {
 	margin: auto;
 	/* tamanho do form eh 50% da viewport */
 	width: 50vw;
-	background-color: white;
+	background-color: var(--corSecundaria);
 	padding: 10px;
 	border-radius: 15px;
 }
@@ -25,20 +36,20 @@ section {
 
 #fcontato input:not([type='radio']) {
 	border: 0px;
-	background-color: #ecf0f1;
+	background-color: var(--corCampos);
 	height: 25px;
 	padding: 8px;
 }
 
 #fcontato input[type='radio'] {
 	border: 0px;
-	background-color: #ecf0f1;
+	background-color: var(--corCampos);
 	padding: 8px;
 }
 
 #fcontato select {
 	border: 0px;
-	background-color: #ecf0f1;
+	background-color: var(--corCampos);
 	height: 35px;
 	padding: 8px;
 }
@@ -49,7 +60,7 @@ section {
 }
 
 #fcontato legend {
-	color: rgb(0, 160, 160);
+	color: var(--corPrimaria);
 	font-weight: bold;
 	text-align: center;
 	font-size: large;
@@ -68,21 +79,21 @@ section {
 }
 
 .btn-primary {
+	margin: 20px;
 	border-radius: 15px;
 	text-transform: uppercase;
 	padding: 10px;
-	font-size: 10px 50px;
 	font-weight: bold;
-	color: white;
+	color: var(--corSecundaria);
 	width: 150px;
-	background-color: rgb(0, 160, 160);
+	background-color: var(--corPrimaria);
 	border-width: 0px;
 }
 
 .btn-primary:hover {
-	background-color: white;
-	color: rgb(0, 160, 160);
-	border: 1px solid rgb(0, 160, 160);
+	background-color: var(--corSecundaria);
+	color: var(--corPrimaria);
+	border: 1px solid var(--corPrimaria);
 }
 
 .icone {
@@ -90,5 +101,9 @@ section {
 }
 
 .primary-color {
-	color: rgb(0, 160, 160);
+	color: var(--corPrimaria);
+}
+
+.secondary-color {
+	color: var(--corSecundaria);
 }
