@@ -49,7 +49,8 @@
 
                 <div class="subcontainerForm">
                     <label for="crg"> RG: </label>
-                    <input type="text" name="trg" id="crg" maxlength="7" />
+                    <input type="text" name="trg" id="crg" maxlength="7"
+                        onkeyup="javascript: maskManager( this, maskRG );" />
                 </div>
 
                 <div class="subcontainerForm">
@@ -60,7 +61,7 @@
 
                 <div class="subcontainerForm">
                     <label for="cfixo"> Telefone Fixo: </label>
-                    <input type="text" name="tfixo" id="cfixo"
+                    <input type="text" name="tfixo" id="cfixo" maxlength="13"
                         onkeyup="javascript: maskManager( this, maskTelefoneFixo );" />
                 </div>
             </fieldset>
@@ -132,7 +133,7 @@
 
                 <div class="subcontainerForm">
                     <label for="ccep">CEP:</label>
-                    <input type="text" name="tcep" id="ccep" placeholder="seu cep"
+                    <input type="text" name="tcep" id="ccep" placeholder="seu cep" maxlength="10"
                         onkeyup="javascript: maskManager( this, maskCEP );" />
                 </div>
 

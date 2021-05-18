@@ -5,6 +5,14 @@ function maskManager(objeto, mascara) {
 	objeto.value = mascara(objeto.value);
 }
 
+function maskRG(rg) {
+	rg = rg.replace(/\D/g, '');
+	if (rg.length > 7) {
+		rg = rg.substring(0, 7);
+	}
+	return rg;
+}
+
 function maskTelefoneCelular(tel) {
 	return maskTelefoneGenerica(tel, 11);
 }
