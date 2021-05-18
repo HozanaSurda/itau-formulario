@@ -1,0 +1,122 @@
+:root {
+	--corPrimaria: rgb(0, 160, 160);
+	--corSecundaria: white;
+	--corCampos: #ecf0f1;
+}
+
+body {
+	background-color: rgb(0, 160, 160); /* Apenas para internet explorer */
+	background-color: var(--corPrimaria);
+}
+
+h1 {
+	font-size: xx-large;
+	color: white; /* Apenas para internet explorer */
+	color: var(--corSecundaria);
+}
+
+section {
+	margin-top: 100px;
+}
+
+#fcontato {
+	/* Centraliza o form - (text-align: center; nao funciona O_o - nao entendi a diferenca)*/
+	margin: auto;
+	/* tamanho do form eh 50% da viewport */
+	width: 50vw;
+	background-color: white; /* Apenas para internet explorer */
+	background-color: var(--corSecundaria);
+	padding: 10px;
+	border-radius: 15px;
+}
+
+/* Para telas abaixo de 750px - coloca form com tamanho maior */
+@media screen and (max-width: 750px) {
+	#fcontato {
+		width: 80vw;
+	}
+}
+
+#fcontato input:not([type='radio']) {
+	border: 0px;
+	background-color: #ecf0f1; /* Apenas para internet explorer */
+	background-color: var(--corCampos);
+	height: 25px;
+	padding: 8px;
+}
+
+#fcontato input[type='radio'] {
+	border: 0px;
+	background-color: var(--corCampos);
+	padding: 8px;
+}
+
+#fcontato select {
+	border: 0px;
+	background-color: #ecf0f1; /* Apenas para internet explorer */
+	background-color: var(--corCampos);
+	height: 35px;
+	padding: 8px;
+}
+
+#fcontato fieldset {
+	border: 0px;
+	margin-top: 50px;
+}
+
+#fcontato legend {
+	color: rgb(0, 160, 160); /* Apenas para internet explorer */
+	color: var(--corPrimaria);
+	font-weight: bold;
+	text-align: center;
+	font-size: large;
+}
+
+.centralizar {
+	text-align: center;
+}
+
+.subcontainerForm {
+	/* coloca os campos do form em linha */
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.btn-primary {
+	margin: 20px;
+	border-radius: 15px;
+	text-transform: uppercase;
+	padding: 10px;
+	font-weight: bold;
+	color: white; /* Apenas para internet explorer */
+	color: var(--corSecundaria);
+	width: 150px;
+	background-color: rgb(0, 160, 160); /* Apenas para internet explorer */
+	background-color: var(--corPrimaria);
+	border-width: 0px;
+}
+
+.btn-primary:hover {
+	background-color: white; /* Apenas para internet explorer */
+	background-color: var(--corSecundaria);
+	color: rgb(0, 160, 160); /* Apenas para internet explorer */
+	color: var(--corPrimaria);
+	border: 1px solid rgb(0, 160, 160); /* Apenas para internet explorer */
+	border: 1px solid var(--corPrimaria);
+}
+
+.icone {
+	font-size: 30px;
+}
+
+.primary-color {
+	color: rgb(0, 160, 160); /* Apenas para internet explorer */
+	color: var(--corPrimaria);
+}
+
+.secondary-color {
+	color: white; /* Apenas para internet explorer */
+	color: var(--corSecundaria);
+}

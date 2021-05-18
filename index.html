@@ -5,11 +5,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+    </link>
+    <script src="https://kit.fontawesome.com/fe74ad7b22.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1> EM DESENVOLVIMENTO ... </h1>
+    <section>
+        <header class="centralizar">
+            <h1> Cadastro Pessoal </h1>
+        </header>
+        <form method="post" id="fcontato">
+            <fieldset id="dados">
+                <legend>Dados Pessoais </legend>
+
+                <div class="subcontainerForm">
+                    <label for="cnome"> Nome: </label>
+                    <input type="text" name="tnome" id="cnome" maxlength="250" placeholder="Nome Completo" />
+                </div>
+
+                <div class="subcontainerForm">
+                    <label>Sexo:</label>
+                    <div>
+                        <input type="radio" name="tsexo" id="cmasc" />
+                        <label for="cmasc"> Masculino </label>
+
+                        <input type="radio" name="tsexo" id="cfem" />
+                        <label for="cfem"> Feminino </label>
+                    </div>
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="cnasc"> Data de Nascimento: </label>
+                    <input type="date" name="tnasc" id="cnasc">
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="ccpf"> CPF:</label>
+                    <input type="text" name="tcpf" id="ccpf" maxlength="14"
+                        onkeyup="javascript: maskManager( this, maskCPF );" />
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="crg"> RG: </label>
+                    <input type="text" name="trg" id="crg" maxlength="7"
+                        onkeyup="javascript: maskManager( this, maskRG );" />
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="ctel"> Telefone Celular: </label>
+                    <input type="text" name="ttel" id="ctel" maxlength="14"
+                        onkeyup="javascript: maskManager( this, maskTelefoneCelular );" />
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="cfixo"> Telefone Fixo: </label>
+                    <input type="text" name="tfixo" id="cfixo" maxlength="13"
+                        onkeyup="javascript: maskManager( this, maskTelefoneFixo );" />
+                </div>
+            </fieldset>
+
+            <fieldset id=" endereco">
+                <legend>Endereço</legend>
+
+                <div class="subcontainerForm">
+                    <label for="crua"> Logradouro: </label>
+                    <input type="text" name="trua" id="crua" maxlength="80" placeholder="Rua, Av,...">
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="cnum"> Numero: </label>
+                    <input type="text" name="tnum" id="cnum" maxlength="10" />
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="cest"> Estado:</label>
+                    <select name="test" id="cest">
+                        <optgroup label="Regiao Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+
+                        <optgroup label="Regiao Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+
+                        <optgroup label="Regiao Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                        </optgroup>
+
+                        <optgroup label="Regiao Sudeste">
+                            <option value="ES">Espírito Santo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+
+                        <optgroup label="Regiao Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="ccid"> Cidade: </label>
+                    <input type="text" name="tcid" id="ccid" maxlength="40" placeholder="sua cidade" />
+                </div>
+
+                <div class="subcontainerForm">
+                    <label for="ccep">CEP:</label>
+                    <input type="text" name="tcep" id="ccep" placeholder="seu cep" maxlength="10"
+                        onkeyup="javascript: maskManager( this, maskCEP );" />
+                </div>
+
+            </fieldset>
+            <div class="centralizar">
+                <button type="button" class="btn-primary" onclick="simularSubmit()">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="centralizar">
+        <footer>
+            <p class="secondary-color">&copy; HozanaSurda - Deus é Fiel! -
+                <a href="https://github.com/HozanaSurda">
+                    <i class="fab fa-github icone secondary-color"></i>
+                </a>
+            </p>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
